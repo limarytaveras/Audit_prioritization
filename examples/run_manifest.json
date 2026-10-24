@@ -1,0 +1,40 @@
+{
+  "version": "3.0.0",
+  "config": {
+    "plan_year": 2027,
+    "reserve": 0.15,
+    "top_n": 12
+  },
+  "data_origin": "synthetic",
+  "input_sha256": {
+    "capacity.csv": "dbc3296e5836bd5ffa9c1d2290f7ce178bd222e023f7aed708b60fa1cf74bd1c",
+    "findings.csv": "e2239c7611a98ec22994400a90278ba2517fbced95113434a19adc7dfe0b4b8c",
+    "incidents.csv": "087e07f84014d5976076a535c104917943dcef1f5ecd5692eda0acd21b755f83",
+    "universe.csv": "5ed37f199d10299e202d0b7016486d3a2e6f5b67ca2ecd1fa728c6557be71dfe"
+  },
+  "rows": 48,
+  "selected": 26,
+  "model": {
+    "used": true,
+    "target": "selected_next_year",
+    "interpretation": "Historical selection, not adverse audit outcomes",
+    "holdout_year": 2025,
+    "train_rows": 144,
+    "test_rows": 48,
+    "roc_auc": 0.6701940035273368,
+    "average_precision": 0.6186409570898717,
+    "brier_score": 0.22940339812551547,
+    "prevalence": 0.4375,
+    "note": "Synthetic evaluation is not evidence of real-world performance; output excluded from priority score"
+  },
+  "capacity": {
+    "remaining_hours": {
+      "Team 1": 10.0,
+      "Team 2": 36.0,
+      "Team 3": 22.0
+    },
+    "over_capacity": {},
+    "capacity_validated": true,
+    "selection_method": "Greedy priority order; not portfolio optimization"
+  }
+}
